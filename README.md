@@ -44,8 +44,10 @@ Ici on peut voir que Ionic possède toute une série (9) de couleur de base pré
 
 Nous verrons comment les intégrer facilement au HTML plus tard.
 
+```
 <ion-toolbar color="primary">
   <ion-title>
     Todolist
   </ion-title>
 </ion-toolbar>
+```

@@ -65,3 +65,25 @@ Videz l'intérieur des balises `<ion-content>` et y intégrer une div ayant comm
 Ensuite, allez dans `src/app/home/home.page.scss` et mettez
 
 ![bg-img style](./asset/bg-img.png)
+
+Maintenant que nous avons un visuel, nous allons injecter les premières valeurs
+
+![Hello](./asset/Hello.png)
+
+On va réglé le problème de currentDate plus tard.
+
+Vous pouvez bien sûr changer les textes avec par exemple "Bonjour [Votre prénom]"
+
+Mettre un peu de style:
+
+![StyleHello](./asset/StyleHello.png).
+
+Pour finir cette partie, allez dans le fichier `src/app/home/home.page.ts`.
+
+Dans export, déclarer currentDate comme étant une string :
+
+```
+export class HomePage {
+    currentDate: string;
+
+```

@@ -38,4 +38,14 @@ Pour commencer, changez le titre de l'application.
 
 Dans la balise `<ion-title> [Votre prénom]'s Todolist</ion-title>`.
 
-Ensuite, allez dans le ficher `src/theme/variable.scss` et
+Ensuite, allez dans le ficher `src/theme/variable.scss` et changer la première valeur (--ion-color-primary) pour la mettre en #5a8ca4.
+
+Ici on peut voir que Ionic possède toute une série (9) de couleur de base pré-enregistrées qui peuvent être utilisée plus facilement. Ces couleurs possèdent aussi des variantes (contrast, shade et tint) qui sont utilisable.
+
+Nous verrons comment les intégrer facilement au HTML plus tard.
+
+<ion-toolbar color="primary">
+  <ion-title>
+    Todolist
+  </ion-title>
+</ion-toolbar>

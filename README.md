@@ -101,3 +101,28 @@ Vous avez terminez la première étape: Bravo !!!!
 On passe à la suite.
 
 ## Connecter son applicaton à FireBase
+
+Pour ce faire, vous devrez commencer par avoir un compte google et vous rendre sur le site de [FireBase](https://firebase.google.com).
+
+Ensuite, dans un nouvel onglet du termninal, faites la commande `npm install firebase @angular/fire --save`
+
+Une fois ce package installé, allez dans `src/app/app.module.ts`.
+
+Ici, nous allons importer d'une part **AngularFireModule** qui va associer notre application Ionic avec Firebase, et d'autre part **AngularFireDatabaseModule** pour utiliser les fonctions associées aux bases de données de Firebase.
+
+![import-module](./asset/import-module.png)
+
+Maintenant nous allons connecter Firebase à notre application.
+
+Pour commencer, sur firebase, connectez-vous grâce à votre compte google.
+
+Vous avez alors accès à la console. Clique sur "ajouter un projet", entrer le nom de votre projet, suivant, activer Google Analytics, suivant, accepter tout et créer le projet.
+
+Ca peut prendre un peu de temps.
+Vous avez alors accès à votre projet.
+
+Pour faire le liaison avec votre appli,cliquez sur l'onglet web dans l'ajout d'application
+
+![web](./asset/web/png)
+
+Nous allons nous intéresser à la parte Database que vous trouvez dans dans l'onglet Développer (sur la gauche).

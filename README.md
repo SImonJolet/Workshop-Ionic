@@ -129,8 +129,45 @@ Vous entrez un nom, et cliquez sur enregistrer l'application.
 
 Vous avez alors un bloc de code, copiez-collez la partie `var firebaseConfig = {
 
-...
+Différents code
 
 }`
 
-Nous allons nous intéresser à la partie Database que vous trouvez dans dans l'onglet Développer (sur la gauche).
+et collez ce code dans l'export de l'export de `src/app/app.module.ts`.
+
+Il faut ensuite déclarer ces packages.
+
+Vous devez arriver un fichier qui ressemble à ça:
+
+![BigPageConfig](./asset/bigPageConfig.png)
+
+NB: grace à la fonction initializeApp, notre projet est lié à l'app.
+
+A présent, allons dans la partie Database que vous trouvez dans dans l'onglet Développer (sur la gauche).
+
+Cliquez sur "Créer une base de données", continuer en mode production, puis changez votre région en "eur3 (europe-west)".
+De nouveau, ça prend un peu de temps.
+
+Ensuite, c'est important: tout en haut, à coté de "Database", **passer de Cloud Firestore à RealTime Database !!!**
+
+![Realtime](./asset/realtime.png)
+
+Retour dans le code pour finir cette liaison.
+
+Dans `src/app/home/home.page.ts` importez le module _AngularFireDatabase_ :
+
+`import { AngularFireDatabase } from '@angular/fire/database';`
+
+et déclarez ce module dans le constructor() pour povoir l'utiliser dans le reste de la page.
+
+![constructorpublic](./asset/constructorpublic.png)
+
+Voila, la liaison est finie.
+C'est la partie la moins marrante et la plus abstraite, donc si vous êtes arrivé ici, ben vous êtes une re-sta et bravo !!
+Au niveau du visuel, rien n'a changé, mais derrière tout fonctionne à présent!!
+
+NB: Regardez quand même dans la console de l'inspecteur que rien ne soit cassé, c'est hautement probable.
+
+## Ajouter une tâche à notre TodoList
+
+Vous me direz: "T'es bien gentil Simon, mais on est loin du résultat". Je sais, donc je vous dis "Fooooooonce, le temps file et je passe pas ma journée ici !!! "

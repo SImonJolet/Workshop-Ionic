@@ -64,4 +64,4 @@ Videz l'intérieur des balises `<ion-content>` et y intégrer une div ayant comm
 
 Ensuite, allez dans `src/app/home/home.page.scss` et mettez
 
-![bg-img style](./asset/bg-img)
+![bg-img style](/asset/bg-img)

@@ -171,3 +171,11 @@ NB: Regardez quand même dans la console de l'inspecteur que rien ne soit cassé
 ## Ajouter une tâche à notre TodoList
 
 Vous me direz: "T'es bien gentil Simon, mais on est loin du résultat". Je sais, donc je vous dis "Fooooooonce, le temps file et je passe pas ma journée ici !!! "
+
+En avant pour une meilleure partie: l'ajout de tâche.
+
+C'est à partir de cette partie que vous allez voir le plus de "particularités" d'**Ionic** et les avantages disponibles. Je vais en expliquer quelques dans le texte, mais il y en aura d'autres que je vous laisse découvrir.
+
+Excusez-moi déjà pour le grand nombre de photo mais c'est plus simple et plus explicite qu'un long texte.
+
+Pour commencer, nous allons créer un formulaire d'envoi qui contiendra simplement un champ de texte, et plus tard un bouton de validation.

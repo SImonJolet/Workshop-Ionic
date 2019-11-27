@@ -123,6 +123,14 @@ Vous avez alors accès à votre projet.
 
 Pour faire le liaison avec votre appli,cliquez sur l'onglet web dans l'ajout d'application
 
-![web](./asset/web/png)
+![web](./asset/web.png)
 
-Nous allons nous intéresser à la parte Database que vous trouvez dans dans l'onglet Développer (sur la gauche).
+Vous entrez un nom, et cliquez sur enregistrer l'application.
+
+Vous avez alors un bloc de code, copiez-collez la partie `var firebaseConfig = {
+
+...
+
+}`
+
+Nous allons nous intéresser à la partie Database que vous trouvez dans dans l'onglet Développer (sur la gauche).

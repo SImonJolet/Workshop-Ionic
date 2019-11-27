@@ -22,7 +22,9 @@ Ensuite lancer le projet ou vous voulez dans votre ordinateur en tapant dans le 
 Tous les fichiers nécessaires se créent.
 
 Le fait de mettre le " blank " va faire en sorte d'avoir un projet "vide". A la place, on peut mettre "tabs" pour une interface avec plusieurs onglets, "conference" pour un site avec toutes une séries de fonctuionnalité pré-faites, comme une carte, un calendrier etc ...
-De notre coté, on va tout faire à la main en commençant de "rien"
+De notre coté, on va tout faire à la main en commençant de "rien".
+
+Pour finir taper `ionic serve`.
 
 Vous êtes maintenant prêts à rentrer dans le vif du sujet: le code de notre application.
 
@@ -30,9 +32,11 @@ Vous êtes maintenant prêts à rentrer dans le vif du sujet: le code de notre a
 
 Pour commencer on peut faire un tour de l'architecture, on se rends compte que c'ets une architecture Angular. Pas de panique, ici nous n'irons pas dans les méandres du _routing_ angular, nous allons juste utiliser l'architecture pour insérer toutes nos fonctionnalités.
 
-Nos efforts vont se concentrer sur les .ts, .html et .scss du dossier `home`, avec quelques détours pour quelques lignes, mais tout sera expliquer (je l'espère) dans ce tuto.
+Comme vous pouvez le voir, les feuilles de style sont en scss, donc lancer votre plugin "Live Sass Compiler" afin de compiler en direct.
 
-Maintenant que vous êtes un peu familier avec notre environnement de travail, rendez-vous dans `src/app/home/home.page.htl`.
+Nos efforts vont se concentrer sur les .ts, .html et .scss du dossier `home`, avec quelques détours pour quelques lignes, mais tout sera expliqué (je l'espère) dans ce tuto.
+
+Maintenant que vous êtes un peu familier avec notre environnement de travail, rendez-vous dans `src/app/home/home.page.htlm`.
 
 Pour commencer, changez le titre de l'application.
 
@@ -51,3 +55,13 @@ Nous verrons comment les intégrer facilement au HTML plus tard.
   </ion-title>
 </ion-toolbar>
 ```
+
+Voila, notre en-tête est toute belle.
+
+A présent, téléchargez l'image "bg" des assets.
+
+Videz l'intérieur des balises `<ion-content>` et y intégrer une div ayant comme class "bg-img".
+
+Ensuite, allez dans `src/app/home/home.page.scss` et mettez
+
+![bg-img style](./asset/bg-img)

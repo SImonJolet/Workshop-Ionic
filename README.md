@@ -76,7 +76,7 @@ Vous pouvez bien sûr changer les textes avec par exemple "Bonjour [Votre préno
 
 Mettre un peu de style:
 
-![StyleHello](./asset/StyleHello.png).
+![StyleHello](./asset/StyleHello.png)
 
 Pour finir cette partie, allez dans le fichier `src/app/home/home.page.ts`.
 
@@ -87,3 +87,17 @@ export class HomePage {
     currentDate: string;
 
 ```
+
+Et dans le constructor, ajouter la variable current date grâce à l'objet date de JavaScript
+
+![NewDate](./asset/NewDate.png)
+
+A présent, vous devriez avoir ceci:
+
+![Step2](./asset/Step2.png)
+
+Vous avez terminez la première étape: Bravo !!!!
+
+On passe à la suite.
+
+## Connecter son applicaton à FireBase

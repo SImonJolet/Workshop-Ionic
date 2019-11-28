@@ -258,3 +258,45 @@ et au click sur le bouton d'ajout, vous avez ce visuel:
 ![Step3Postclick](./asset/Step3Postclick.png)
 
 Mais ce n'est pas assez, on va pousser le truc un peu plus loin.
+
+## Afficher nos Tâches sur notre écran
+
+C'est bien beau d'encoder des tâches, mais si rien ne s'affiche pour nous rappeler de la faire, ça sert pas à grand chose. C'est notre mission pour cette étape.
+
+Commençons par créer la variable `tasks= []`dans `home.page.ts`.
+
+Nous allons utiliser ce tableau pour y pusher nos données et pouvoir les ressortir à l'affichage.
+
+Pour ce faire, créez la fonction getTasks():
+
+```
+getTasks() {
+  this.afDB.list('Tasks/').snapshotChanges(['child_added', 'child_removed']).subscribe(actions => {
+    this.tasks = [];
+    actions.forEach(action => {
+      this.tasks.push({
+        key: action.key,
+        text: action.payload.exportVal().text,
+        hour: action.payload.exportVal().date.substring(11, 16),
+        checked: action.payload.exportVal().checked
+      });
+    });
+  });
+}
+```
+
+Analysons ce code:
+
+- `this.afDB.list('Tasks/')` : nous travaillons dans Firebase dans la base de donnée appelée Tasks.
+- `snapshotChanges(['child_added', 'child_removed'])` : pour chaque moification, nous refaisons un check dans la db.
+- `this.tasks = [];`: Dans quel tableau je mets mes tâches.
+- `actions.forEach(action => { this.tasks.push({` : pour chaque élément, pusher dans notre tableau tasks.
+- `hour: action.payload.exportVal().date`: valeur du payload du champs date de notre objet. Ce champs est définit un peu plus haut, lors de la fonction `addTaskToFirebase()`.
+- `.substring(11, 16)`: ne prendre que les caractères du 11ieme au 16ieme afin de ne rendre que l'heure.
+
+Avec ces informations, vous devriez comprendre tout le bloc.<br>
+Si ce n'est pas le cas, vous pouvez me poser la question, j'essaierai de vous aider.
+
+Pour afficher sur l'écran notre liste de tâches, nous devons tout de suite appeler la fonction `getTasks()` au chargement de la page. <br> Pour ce faire, il faut l'écrire dans le constructor:
+
+![getTasksConstructor](./asset/getTasksConstructor.png)

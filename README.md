@@ -180,7 +180,7 @@ Excusez-moi déjà pour le grand nombre de photo mais c'est plus simple et plus 
 
 Pour commencer, nous allons créer un formulaire d'envoi qui contiendra simplement un champ de texte, et plus tard un bouton de validation.
 
-![addButton](./asset.AddButton.png)
+![addButton](./asset/AddButton.png)
 
 Petite explication:
 
@@ -191,7 +191,7 @@ On va donc aller déclarer le myTask en tant que string sous le currentDate.
 
 Ajoutons à présent le bouton "ajouter" en insérant ce bout de code dans l' `ion-item` déjà là.
 
-![plusIcon](./asset/pusIcon.png)
+![plusIcon](./asset/plusIcon.png)
 
 C'est ici qu'on rencontre pour la première fois les icones Ionic.
 
@@ -203,6 +203,6 @@ Ionic utilise déjà les nouvelles pratiues CSS (cf veille de Rimbaud.)
 
 Enfin, le `(click)="addTaskToFirebase()"` appelle au click la fonction que nous allons implanter dans le fichier .ts
 
-Encodez ce code dans le fichier `home.page.ts`.
+Encodez ce code dans le fichier `home.page.ts`, sous le constructor (après les accolades du constructor)
 
 ![addTaskToFirebase](./asset/addTaskToFirebase.png)

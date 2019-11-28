@@ -410,7 +410,7 @@ Un petit défaut qui m'a frappé depuis que j'ai commencé Ionic (5-6jours), c'e
 
 Ca y est !!! Votre TodoList ressemble à l'objectf fixé au départ, et possèdent toutes les fonctionnalités prévues:
 
-![gif-Resulat](./asset/gif-Resulat.png)
+![gif-Resulat](https://drissas.com/wp-content/uploads/2019/11/ionic-todolist.gif)
 
 Félicitation, en une matinée, vous avez construit un vrai petit projet utilisable. <br>
 Vous avez également appréhender les bases d'Ionic, vous avez entrevu à quel point ça peut être utile et vous vous êtes rendu compte de la possibilité de faire un seul code et de quand même pouvoir déployer sur andrdoid, ios ou en Desktop tout en respectant les chartes graphiques des différentes plateformes.

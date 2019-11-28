@@ -179,3 +179,22 @@ C'est à partir de cette partie que vous allez voir le plus de "particularités"
 Excusez-moi déjà pour le grand nombre de photo mais c'est plus simple et plus explicite qu'un long texte.
 
 Pour commencer, nous allons créer un formulaire d'envoi qui contiendra simplement un champ de texte, et plus tard un bouton de validation.
+
+![addButton](./asset.AddButton.png)
+
+Petite explication:
+
+- Le `lines="none"` re-style un peu le champ (esssayez sans pour voir la différence).
+- le `[(ngModel)]="myTask"` sert à lié avec la partie .ts pour utilisé `myTask`.
+
+On va donc aller déclarer le myTask en tant que string sous le currentDate.
+
+Ajoutons à présent le bouton "ajouter" en insérant ce bout de code dans l' `ion-item` déjà là.
+
+![plusIcon](./asset/pusIcon.png)
+
+C'est ici qu'on rencontre pour la première fois les icones Ionic.
+
+En effet, Ionic possède une bibliothèque d'icônes que l'on peut appeler avec leur nom. Ici: `name="add"`.
+
+Nous voyons aussi pour la première fois une commande très utile pour le placement: le `slot`. Elle permet de placer un objet

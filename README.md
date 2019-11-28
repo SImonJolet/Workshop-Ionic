@@ -203,6 +203,38 @@ Ionic utilise déjà les nouvelles pratiues CSS (cf veille de Rimbaud.)
 
 Enfin, le `(click)="addTaskToFirebase()"` appelle au click la fonction que nous allons implanter dans le fichier .ts
 
-Encodez ce code dans le fichier `home.page.ts`, sous le constructor (après les accolades du constructor)
+Encodez ce code dans le fichier `home.page.ts`, sous le constructor (après les accolades du constructor).
 
 ![addTaskToFirebase](./asset/addTaskToFirebase.png)
+
+Je vous laisse comprendre ce que fait cette fonction. J'expliquerai juste que `afDB` est la fonction de liaison à Firebase quqe nous avons déjà déclarer un peu plus haut dans le constructir. C'est grâce à cette déclaration que nous pouvons le réutiliser ici.
+
+Ensuite nous détaillons les champs créés dans Firebase lors de l'appel de `addTaskToFirebase()`.
+
+Maintenant, exécutons la foncton `showForm()`qui va cacher ou montrer le formulaire d'envoi. Ainsi, lorsque que nous envoyons une nouvelle tâche, nous revenons à la page d'acceuil.
+
+Pour commencer, déclarez dans l'export la variable addTask en boolean :
+
+![addTaskBoolean](./asset/addTaskBoolean.png)
+
+Ensuite appelez cette variable dans le fonction showForm():
+
+![showForm](./asset/showForm.png)
+
+Grâce à cette fonction imbriquée dans le fonction addTaskToFirebase(), à chaque appel à cette dernière, nous inversons la valeur de `addTask` et nous mettons `myTask`, c'est à dire la nouvelle tâche à encoder à du vide.
+
+Maintenant que la fonction pour afficher ou montrer cette option est implémantée, il nous faut créer le bouton qui va faire cette action.
+
+Hors de notre balise `<ion-card>`, ajouter ce code :
+
+```
+<ion-button *ngIf="!addTask" (click)="showForm()" expand="block" class="add-button">
+  <ion-icon name="add" slot="start"></ion-icon>
+  Ajouter une tâche
+</ion-button>
+
+<ion-button *ngIf="addTask" (click)="showForm()" expand="block" class="add-button">
+  <ion-icon name="close" slot="start"></ion-icon>
+  Annuler
+</ion-button>
+```

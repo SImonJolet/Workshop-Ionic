@@ -189,13 +189,15 @@ Petite explication:
 
 On va donc aller déclarer le myTask en tant que string sous le currentDate.
 
-Ajoutons à présent le bouton "ajouter" en insérant ce bout de code dans l' `ion-item` déjà là.
+Ajoutons à présent le bouton "ajouter" en insérant ce bout de code dans l' `ion-input` déjà là.
 
 ![plusIcon](./asset/plusIcon.png)
 
 C'est ici qu'on rencontre pour la première fois les icones Ionic.
 
 En effet, Ionic possède une bibliothèque d'icônes que l'on peut appeler avec leur nom. Ici: `name="add"`.
+
+La liste des icones disponibles et pré-enregistrées est sur la [doc](https://ionicons.com).
 
 Nous voyons aussi pour la première fois une commande très utile pour le placement: le `slot`. Elle permet de placer un objet. Icon-only, je sais pas ce que ça veut dire, mais il y a aussi end et start qui sont très utilisés et qui mettre à gauche et à droite.
 
@@ -238,3 +240,21 @@ Hors de notre balise `<ion-card>`, ajouter ce code :
   Annuler
 </ion-button>
 ```
+
+Nous introduisons ici le \*ngIf, preuve qu'Angular est assez utile dans contexte pour changer l'affiche d'élément en fonction de la variable `addTask`.
+Sur le click, nous appelons également la fonction `showForm()` qui va justement changer la valeur de cette donnée.
+On peut voir également toute une série de fonctionnalité propres à Ionic, comme l'appel d'icones, le principe des "slot" ou un expand.
+
+Mettez un peu de style à tout ça, par exemple:
+
+![styleBottomButton](./asset/styleBottomButton.png)
+
+Bravo, vous êtes capables d'ajouter des tâches, tout du moins sur le visuel. Vous devriez avoir un écran qui ressemble à celui-ci:
+
+![Step3Preclick](./asset/Step3Preclick.png)
+
+et au click sur le bouton d'ajout, vous avez ce visuel:
+
+![Step3Postclick](./asset/Step3Postclick.png)
+
+Mais ce n'est pas assez, on va pousser le truc un peu plus loin.

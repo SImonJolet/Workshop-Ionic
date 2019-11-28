@@ -413,7 +413,8 @@ Ca y est !!! Votre TodoList ressemble à l'objectf fixé au départ, et possède
 ![gif-Resulat](https://drissas.com/wp-content/uploads/2019/11/ionic-todolist.gif)
 
 Félicitation, en une matinée, vous avez construit un vrai petit projet utilisable. <br>
-Vous avez également appréhender les bases d'Ionic, vous avez entrevu à quel point ça peut être utile et vous vous êtes rendu compte de la possibilité de faire un seul code et de quand même pouvoir déployer sur andrdoid, ios ou en Desktop tout en respectant les chartes graphiques des différentes plateformes.
+Vous avez également appréhender les bases d'Ionic, vous avez entrevu à quel point ça peut être utile et vous vous êtes rendu compte de la possibilité de faire un seul code et de quand même pouvoir déployer sur andrdoid, ios ou en Desktop tout en respectant les chartes graphiques des différentes plateformes.<br>
+Et pour finir vous avez un peu vu comment fonctionne Firebase (que je ne connaissais pas) qui est quand même une solution de base de données facile, et même si le service est limité en terme de gratuité, il y a déjà moyen de faire.
 
 Merci d'avoir suivi ce workshop/tuto, j'espère que ça vous a plu autant qu'à moi (peut-être même plus parce que taper tout ce texte, j'avoue à la fin,j'en avais un peu marre) et que vous appris quelque chose.
 

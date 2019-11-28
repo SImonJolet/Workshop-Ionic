@@ -300,3 +300,32 @@ Si ce n'est pas le cas, vous pouvez me poser la question, j'essaierai de vous ai
 Pour afficher sur l'écran notre liste de tâches, nous devons tout de suite appeler la fonction `getTasks()` au chargement de la page. <br> Pour ce faire, il faut l'écrire dans le constructor:
 
 ![getTasksConstructor](./asset/getTasksConstructor.png)
+
+Voila, les taches sont disponibles, on peut le voir grâce à un petit `console.log("Task : " + this.myTask)` juste sous le `showForm()` pour vérifier dans notre inspecteur que tut va bien.
+
+Affichons tout ça sur notre écran.
+
+Pour ça, nous allons utiliser de nouveau la balise [`ion-card`](https://ionicframework.com/docs/api/card).
+
+Dans `home.page.html`, entre la `<ion-card>` prévue pour l'ajout de tâche et le bouton du bas, ajoutez ce code :
+
+![TaskAffichage.png](./asset/TaskAffichage.png)
+
+Explications:
+
+- `*ngFor="let task of tasks"` : boucle pour afficher toute la liste de tâches et pas une seule.
+- `color="success"`: une nouvelle couleur (vert) pré-enregistrée dans Ionic. De plus, comme est elle dans une check-box, elle ne se mettra que quand la check-box sera "successfull", c'est à dire qu ela tâche sera remplie.
+- `<ion-checkbox>`: une balise ion toute prete pour des checker-box.
+- `{{task.text}}` : aller rechercher la donnée text déclarée dans `home.page.ts`
+
+Créons un petit bouton dans notre Header pour pouvoir recharger notre page, et p-e dans le futur pouvoir partager cette Todo list.
+
+Pour ce faire, il suffit de créer un bouton dans le header et de lui faire appeler `getTasks()`, la fonction qui fait l'affichage des tâches.
+
+Voila à quoi ressemble notre header dans `home.page.html` à présent :
+
+![finalHeader.png](./asset/finalHeader.png)
+
+Nous avons enfin un todolist qui ressemble à quelque chose !!, elle devrait ressembler à ça:
+
+![Step4final](./asset/Step4final.png)

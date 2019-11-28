@@ -197,4 +197,12 @@ C'est ici qu'on rencontre pour la première fois les icones Ionic.
 
 En effet, Ionic possède une bibliothèque d'icônes que l'on peut appeler avec leur nom. Ici: `name="add"`.
 
-Nous voyons aussi pour la première fois une commande très utile pour le placement: le `slot`. Elle permet de placer un objet
+Nous voyons aussi pour la première fois une commande très utile pour le placement: le `slot`. Elle permet de placer un objet. Icon-only, je sais pas ce que ça veut dire, mais il y a aussi end et start qui sont très utilisés et qui mettre à gauche et à droite.
+
+Ionic utilise déjà les nouvelles pratiues CSS (cf veille de Rimbaud.)
+
+Enfin, le `(click)="addTaskToFirebase()"` appelle au click la fonction que nous allons implanter dans le fichier .ts
+
+Encodez ce code dans le fichier `home.page.ts`.
+
+![addTaskToFirebase](./asset/addTaskToFirebase.png)

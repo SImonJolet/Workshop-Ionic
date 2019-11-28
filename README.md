@@ -329,3 +329,92 @@ Voila à quoi ressemble notre header dans `home.page.html` à présent :
 Nous avons enfin un todolist qui ressemble à quelque chose !!, elle devrait ressembler à ça:
 
 ![Step4final](./asset/Step4final.png)
+
+## Connexion de la checkbox avec Firebase
+
+Pour l'instant, notre checkbox n'est reliée à aucune variable, et donc on coche un peu dans le vide.
+
+Nous allons donc, pour que ça veuille vraiment dire quelque chose, relier cette checkbox avec notre base de données Firebase.
+
+Pour ce faire, ajoutez quelques propriété à la checkbox déjà implémentée
+
+`<ion-checkbox (ionChange)="changeCheckState(task)" color="success" [(ngModel)]="task.checked" slot="start"></ion-checkbox>`
+
+Explication:
+
+- `[(ngModel)]="task.checked"`: de cette manière, le champs va aller voir si la variable checked est à `true` et si c'et le cas, elle colore en vert.
+- `(ionChange)="changeCheckState(task)"`: ceci permet d'exécuter la fonction `changeCheckState` à chaque interaction avec la checkbox.
+
+Nous devons créer cette fonction dans le `home.page.ts`, tout simplement en disant à la base de données de changer la valeur de "checked".
+
+![CheckCheckedDB](./asset/CheckCheckedDB.png)
+
+Vous pouvez à présent voir dans votre console Firebase que les données se modifient de façon dynamique en fonction de ce qui est coché ou pas.
+
+Nous pouvons aussi barré le texte d'une tâche effectuée grâce à une condition mise sur la balise h2 qui entoure le titre de la tâche.
+
+Il suffit de remplacer la balise `<h2>{{task.text}}</h2>` par
+
+```
+      <h2 *ngIf="!task.checked">{{ task.text }}</h2>
+      <h2 *ngIf="task.checked" style="text-decoration:line-through;">{{ task.text }}</h2>
+```
+
+On voit ici deux ligne d'affichage:
+
+- Si la tâche est cochée, `checked` est à true donc on utilise le style `text-decoration:line-trhought` pour barrer le texte, comme dans un HTML normal danslequel on met une propriété CSS.
+
+## Supprimer une tâche
+
+Dernière fonctionnalité, la possibilité de supprimer une tâche, qu'elle soit effectuée ou pas.
+
+Nous allons en profiter pour voir une dernière possibilité Ionic: le slide.
+En effet, nous développons ici quelque chose qui sera principalement du mobile. Or, sur tous les smartphone ou presque, la suppression se fait en slidant le champs vers la gauche. <br>
+Cette fois encore, Ionic nous montre un de ses avantages avec une propriété toute faite très simple à implémanter.
+
+![SlideButton](./asset/SlideButton.png)
+
+Ainsi que des balises `<ion-item-sliding>` et `</ion-item-sliding>` juste à l'intérieur de la balise `<ion-card *ngFor="let task of tasks">`.
+
+Explications:
+
+- `<ion-item-sliding>`et `</ion-item-sliding>`: Mettre l'option de slide sur la `ion-card`.
+- `side="end"`: dit de faire le slide du coté "end", c'est à dire en droite, donc vers la gauche.
+- `(click)="deleteTask(task)"`: au click, on appelle la fonction `deleteTask` que nous allons créer maintenant dans le `home.page.ts`
+
+Il y a aussi le name pour l'icone, le `slot="icon-only"` déjà rencontré plus haut, la `color="danger"` qui va donner du rouge.
+
+Il ne reste plus qu'un petite chose à faire, implémenter la fonction `deleteTask()` dans `home.page.ts` en utilisant la fonction `.remove()` d'Ionic à la place de la fonction `.push()` utilisée pour intégrer une nouvelle donnée.
+
+```
+deletetask(task:any){
+  this.afDB.list('Tasks/).remove(ask.key);
+}
+```
+
+Je sais, j'ai dit que c'était la dernière chose à faire, et ben j'ai menti ... Tu va faire quoi ??
+
+En fait, ça serait quand même sympa de se rendre compte du travail fait et d'utilité dans ce projet d'Ionic et du travail en moins grâce à lui. <br>
+Déjà, dans votre inspecteur, changez le device, et passer d'Ios à Android (il faut rafraichir la page après avoir changer). <br>
+On peut voir que les chartes graphiques respectives sont respectées, alors que de notre coté, on n'y a pas ait attention.
+
+D'autre part, je vous invite à passer faire un petit tour sur votre fichier `home.page.scss`, et de vous rendre compte du peu de ligne qu'on a du taper.
+
+Ionic fait tout le travail de style pour nous. <br>
+Ok, c'est une petite application très simple, mais pour la faire "from scratch" avec simplement du HTML-CSS-JS, ça aurait mis énormément de lignes en plus dans la feuille de style en tout cas.<br>
+Aussi, tout est standardisé, mais si on veux nous-même mettre un style particulier pour tel ou tel élément, il est parfaitement possible de mettre des `class` et des `id` sur les balises Ionic et laisser libre cours à notre imagination.
+
+C'est quand même deux énormes avantages.
+
+Un petit défaut qui m'a frappé depuis que j'ai commencé Ionic (5-6jours), c'est qu'il y a beaucoup de balise Ionic à retenir, et quand on commence, c'est comme avec chaque langage, on doit chercher si elle existe et ce qu'elle fait.
+
+Ca y est !!! Votre TodoList ressemble à l'objectf fixé au départ, et possèdent toutes les fonctionnalités prévues:
+
+![gif-Resulat](./asset/gif-Resulat.png)
+
+Félicitation, en une matinée, vous avez construit un vrai petit projet utilisable. <br>
+Vous avez également appréhender les bases d'Ionic, vous avez entrevu à quel point ça peut être utile et vous vous êtes rendu compte de la possibilité de faire un seul code et de quand même pouvoir déployer sur andrdoid, ios ou en Desktop tout en respectant les chartes graphiques des différentes plateformes.
+
+Merci d'avoir suivi ce workshop/tuto, j'espère que ça vous a plu autant qu'à moi (peut-être même plus parce que taper tout ce texte, j'avoue à la fin,j'en avais un peu marre) et que vous appris quelque chose.
+
+Bonne journée, et à bientot pour de nouvelles aventures.

@@ -354,7 +354,7 @@ Nous devons créer cette fonction dans le `home.page.ts`, tout simplement en dis
 
 Vous pouvez à présent voir dans votre console Firebase que les données se modifient de façon dynamique en fonction de ce qui est coché ou pas.
 
-Nous pouvons aussi barrer le texte d'une tâche effectuée grâce à une condition mise sur la balise <h2> qui entoure le titre de la tâche.
+Nous pouvons aussi barrer le texte d'une tâche effectuée grâce à une condition mise sur la balise `<h2>` qui entoure le titre de la tâche.
 
 Il suffit de remplacer la balise `<h2>{{task.text}}</h2>` par
 
@@ -365,7 +365,7 @@ Il suffit de remplacer la balise `<h2>{{task.text}}</h2>` par
 
 On voit ici deux ligne d'affichage:
 
-- Si la tâche est cochée, `checked` est à true donc on utilise le style `text-decoration:line-trhought` pour barrer le texte, comme dans un HTML normal dans lequel on met une propriété CSS. Si elle ne l'est pas, le texte s'affiche normalement.
+- Si la tâche est cochée, `checked` est à true donc on utilise le style `text-decoration:line-throught` pour barrer le texte, comme dans un HTML normal dans lequel on met une propriété CSS. Si elle ne l'est pas, le texte s'affiche normalement.
 
 ## Supprimer une tâche
 
@@ -391,7 +391,7 @@ Il ne reste plus qu'un petite chose à faire, implémenter la fonction `deleteTa
 
 ```
 deletetask(task:any){
-  this.afDB.list('Tasks/).remove(ask.key);
+  this.afDB.list('Tasks/).remove(task.key);
 }
 ```
 
@@ -438,4 +438,4 @@ Vous pouvez retrouver mon code [ici](https://github.com/SImonJolet/WorkshopIonic
 #### NB:
 
 Ce workshop est réalisé dans le cadre de la formation Becode.
-Mon lieu de stage m'a demandé de me familiarisé avec l'environnemnt de développement mobile Ionic, et j'ai voulu en faire profiter mes camarades Becodiens.
+Mon lieu de stage m'a demandé de me familiariser avec l'environnemnt de développement mobile Ionic, et j'ai voulu en faire profiter mes camarades Becodiens.

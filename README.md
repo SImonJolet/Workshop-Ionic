@@ -354,7 +354,7 @@ Nous devons créer cette fonction dans le `home.page.ts`, tout simplement en dis
 
 Vous pouvez à présent voir dans votre console Firebase que les données se modifient de façon dynamique en fonction de ce qui est coché ou pas.
 
-Nous pouvons aussi barrer le texte d'une tâche effectuée grâce à une condition mise sur la balise <h2> qui entoure le titre de la tâche.
+Nous pouvons aussi barrer le texte d'une tâche effectuée grâce à une condition mise sur la balise <h2>` qui entoure le titre de la tâche.
 
 Il suffit de remplacer la balise `<h2>{{task.text}}</h2>` par
 

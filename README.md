@@ -432,7 +432,7 @@ Simon Jolet
 
 ### "Solution" :
 
-Avant de donner ce Workshop, j'ai moi-même suivi un tuto faisant la mêmem chose.
+Avant de donner ce Workshop, j'ai moi-même suivi un tuto faisant la mêmem chose.<br>
 Vous pouvez retrouver mon code [ici](https://github.com/SImonJolet/WorkshopIonic2).
 
 #### NB:

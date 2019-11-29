@@ -430,6 +430,11 @@ Bonne journée, et à bientot pour de nouvelles aventures.
 
 Simon Jolet
 
+### "Solution" :
+
+Avant de donner ce Workshop, j'ai moi-même suivi un tuto faisant la mêmem chose.
+Vous pouvez retrouver mon code [ici](https://github.com/SImonJolet/WorkshopIonic2).
+
 #### NB:
 
 Ce workshop est réalisé dans le cadre de la formation Becode.
